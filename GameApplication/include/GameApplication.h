@@ -27,6 +27,16 @@ public:
 
 	virtual void OnRestored();
 
+
+	void OnBeginRender();
+
+	virtual void render();
+
+	void OnEndRender();
+
+	virtual void update();
+
+
 	//Basically runs our game
 	void run();
 

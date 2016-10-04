@@ -14,8 +14,12 @@ GameApplication::GameApplication()
 
 GameApplication::~GameApplication()
 {
+	
+	
 
 }
+
+
 
 void GameApplication::createWindow(const string& windowTitle,const unsigned int width, const unsigned int height, const unsigned int windowFlags)
 {
@@ -108,6 +112,22 @@ void GameApplication::OnRestored()
   m_bIsActive=true;
 }
 
+void GameApplication::OnBeginRender()
+{
+}
+
+void GameApplication::render()
+{
+}
+
+void GameApplication::OnEndRender()
+{
+}
+
+void GameApplication::update()
+{
+}
+
 void GameApplication::run()
 {
 	SDL_Event event;
@@ -162,7 +182,11 @@ void GameApplication::run()
 					break;
 				}
 				}
+
 			}
+			update();
+			OnBeginRender();
+			OnEndRender();
 		}
 	}
 }
