@@ -30,7 +30,7 @@ struct PointLight
 	float quadratic;
 };
 
-uniform PointLight pointLight=PointLight(vec3(0.0f,0.0f,0.0f),vec4(1.0f,1.0f,1.0f,1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f),1.0f,0.09f,0.032f);
+uniform PointLight pointLight=PointLight(vec3(0.0f,0.0f,0.0f),vec4(0.0f,0.0f,0.0f,1.0f), vec4(0.0f, 0.0f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.0f, 1.0f),1.0f,0.09f,0.032f);
 
 /*
 struct SpotLight {
