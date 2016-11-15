@@ -41,6 +41,10 @@ add_custom_command(TARGET GP2BaseCode1617  PRE_BUILD
                    COMMAND ${CMAKE_COMMAND} -E copy_directory
                  ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:GP2BaseCode1617>/assets)
 
+add_custom_target(copy-shader-files ALL
+				COMMAND ${CMAKE_COMMAND} -E copy_directory
+				${CMAKE_SOURCE_DIR}/assets/shaders $<TARGET_FILE_DIR:GP2BaseCode1617>/assets/shaders)
+
 # Gather list of all .xml and .conf files in "/config"
 file(GLOB XMLFiles ${CMAKE_SOURCE_DIR}/*.xml)
 

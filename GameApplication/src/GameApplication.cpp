@@ -193,7 +193,7 @@ void GameApplication::update()
 void GameApplication::OnBeginRender()
 {
   //Set the clear colour(background)
-  glClearColor( 0.0f, 0.0f, 0.0f, 0.0f );
+  glClearColor( 1.0f, 0.0f, 0.0f, 0.0f );
   //clear the colour and depth buffer
   glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 }

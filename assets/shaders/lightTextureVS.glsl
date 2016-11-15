@@ -9,15 +9,16 @@ out vec4 vertexColoursOut;
 out vec2 vertexTextureCoordsOut;
 out vec3 vertexNormalOut;
 out vec3 cameraDirectionOut;
+out vec3 worldPos;
 
 uniform mat4 MVP;
 uniform mat4 Model;
-uniform vec3 cameraPos=vec3(0.0f,0.0f,10.0f);
+uniform vec3 cameraPos;
 
 void main()
 {
 	vertexNormalOut = normalize(Model*vec4(vertexNormal, 0.0f)).xyz;
-	vec3 worldPos = (Model*vec4(vertexPosition, 1.0)).xyz;
+	worldPos = (Model*vec4(vertexPosition, 1.0)).xyz;
 	cameraDirectionOut = normalize(cameraPos - worldPos);
 
 	gl_Position = MVP * vec4(vertexPosition, 1.0);
